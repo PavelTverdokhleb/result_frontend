@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Calendar</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="img/fav.png" />
+	<link rel="stylesheet" href="css/meta_input.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+</head>
+<body>
+	<header class="main_head">
+		<div class="container">
+			<a href="#" class="btn_nav add">Добавить</a>
+			<a href="#" class="btn_nav update">Обновить</a>
+			<a href="#" class="btn_nav clear">Очистить</a>
+			<div class="search">
+				<input id="sub_search" type="submit" value="">
+				<input id="mysearch" type="search" name="search" placeholder="Событие, дата или участник">
+			</div>
+
+			<div class="add_item">
+				<div class="box"></div>
+				<span class="close"></span>
+				<input id="num_day" type="number" placeholder="5"  min="1" max="31" pattern="[0-9]{3}">
+				<input id="new_item" type="text" name="add_btn" placeholder="марта, 14:00, День рождение" autocomplete="off">
+				<a class="btn tod black" href="#">Создать</a>
+			</div>
+
+			<div class="add_container">
+				<div class='add_item_full'>
+					<div class='box'></div>
+					<span class='close'></span>
+					<input id='event' type='text' name='event' placeholder='Событие' autocomplete='off'>
+					<p class="date"></p>
+					<input id='participants' type='text' name='participants' placeholder='Имена участников' autocomplete='off'>
+					<textarea id='descript' name='descript' id='about' cols='30' rows='10' placeholder='Описание'></textarea>
+					<input id='ready' class="btn tod black" type='submit' value='Готово'/>
+					<input id='del' class="btn tod black" type='submit' value='Удалить'/>
+				</div>
+			</div>
+
+		</div>
+	</header>
+	<div class="wrapp">
+		<div class="container">
+			<table id="main_table">
+				<thead>
+					<tr>					
+						<th class="month"><a class="btn prev arrows" href="#"></a><span class="current"></span><a class="btn next arrows" href="#"></a></th>
+						<th><a class="btn tod" href="#">Cегодня</a></th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="libs/jquery/jquery-3.2.1.min.js"></script>
+	<script src="libs/meta_input/meta_input.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
